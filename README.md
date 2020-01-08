@@ -33,7 +33,7 @@ diagonal_difference(squarematrix) == 3
 
 
 
-## 
+##
 <sup>**Level**: Easy</sup>
 
 <sup>**Category**: Sequence Processing</sup>
