@@ -24,18 +24,12 @@ meaningful data
 C:
 '''
 def diagonal_difference(lst):
-    first_diagonal=0
-    second_diagonal=0
+    rtl_diagonal, ltr_diagonal = 0, 0
 
-    for row in lst:
-        for i in range(len(lst)):
-            if lst[i] == row:
-                first_diagonal += row[i]
-        for j in range(len(lst)):
-            if lst[j] == row[::-1]:
-                second_diagonal += row[j]
-    print(first_diagonal, second_diagonal)
-    return abs(first_diagonal - second_diagonal)
+    for i in range(len(lst)):
+        rtl_diagonal += lst[i][i]
+        ltr_diagonal += lst[i][len(lst) - 1 - i]
+    return abs(rtl_diagonal - ltr_diagonal)
 
 print(diagonal_difference([[0, 1, 2], [3, 4, 5], [6, 7, 8]]))
 print(diagonal_difference([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
