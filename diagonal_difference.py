@@ -14,10 +14,11 @@ def diagnol(big_arr):
     i = 0
     totalright = 0
     totalleft = 0
-    for i in big_arr:
-        totalleft +=  i[i]
+    for row in big_arr:
+        totalleft += row[i]
         i += 1
-    for x in big_arr:
-        totalright += x[x]
+    for row in big_arr:
+        totalright += row[x]
         x -= 1
-    return |i - x|
+    return abs(totalleft - totalright)
+    
