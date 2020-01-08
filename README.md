@@ -28,12 +28,12 @@ squarematrix = [[2, 3, 4, 5],
                 [0, 7, 13, 10],
                 [9, 9, 9, 9]]
 
-diagonal_matrix(squarematrix) == 3
+diagonal_difference(squarematrix) == 3
 ```
 
 
 
-## 
+##
 <sup>**Level**: Easy</sup>
 
 <sup>**Category**: Sequence Processing</sup>
