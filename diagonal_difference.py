@@ -23,16 +23,17 @@ the first array will store the first and last index
 the second will
 
 """
-def diagonal_difference(arrays):
-    obj = {}
-    
-    for array in arrays:
-        i=0
-        while i< len(arrays)
-        obj[i] = obj[array[i]]
+def diagonal_difference(matrix):
+    ltr, rtl = 0, 0
+    for i in range(len(matrix)):
+        ltr += matrix[i][i]
+        rtl += matrix[i][ len(matrix) -1 -i]
         
-        i += 1
+    return abs(ltr - rtl)
     
+squarematrix = [[2, 3, 4, 5],
+                [5, 5, 5,10],
+                [0, 7, 13, 10],
+                [9, 9, 9, 9]]
 
-
-
+print(diagonal_difference(squarematrix) == 3)
