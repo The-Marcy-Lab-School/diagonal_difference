@@ -31,12 +31,14 @@ def diagonal_difference(lst):
     sum1 = 0
     sum2 = 0
 
-    for lists in lst:
-        for i in lists:
-            print(i)
+    for i in range(len(lst)):
+        sum1 += lst[i][i]
+        sum2 += lst[i][(len(lst) - 1) - i]
+
+    return abs(sum1 - sum2)
 
 
-diagonal_difference([[2, 3, 4, 5],
+print(diagonal_difference([[2, 3, 4, 5],
                 [5, 5, 5,10],
                 [0, 7, 13, 10],
-                [9, 9, 9, 9]])
+                [9, 9, 9, 9]]))
