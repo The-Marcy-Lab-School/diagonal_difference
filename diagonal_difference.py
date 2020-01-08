@@ -31,10 +31,11 @@ squarematrix = [[2, 3, 4, 5],
                 [0, 7, 13, 10],
                 [9, 9, 9, 9]]
 
-def diagonal_difference(list):
-  for list in squarematrix:
-    for nested_l in list:
-      left_side = 
+def diagonal_difference(matrix):
+  ltr , rlt = 0, 0
+  for i in range(len(matrix)):
+    ltr += matrix[i][i]
+    rlt += matrix[i][(len(matrix) - 1) - i]
 
-
+  return abs(ltr - rlt)
 diagonal_difference(squarematrix)
