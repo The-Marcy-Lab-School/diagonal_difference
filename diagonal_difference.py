@@ -21,20 +21,12 @@ Algorithm:
 """
 
 def diagonal_difference(lst):
-    a = 0
-    b = 0
-    counter = 0
-    backwardsCounter = len(lst) - 1
+    a, b, counter, backwardsCounter = 0, 0, 0, len(lst) - 1
+    
     for arr in lst:
-        arr[counter] + a
-        arr[backwardsCounter] + b
+        a += arr[counter]
+        b += arr[backwardsCounter]
         counter += 1
         backwardsCounter -= 1
-    difference = a - b
-    if difference < 0:
-        return difference * -1
-    return difference
         
-print(diagonal_difference([[1,2,3],[4,5,6],[9,8,9]]))
-                     
-print(diagonal_difference([[2, 3, 4, 5],[5, 5, 5, 10],[0, 7, 13,10],[9, 9, 9, 9]]))
+    return abs(a-b)
